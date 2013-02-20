@@ -65,6 +65,46 @@
                             
                             [loadRemoteButton_ setEnabled:YES];
                         }];
+    
+    
 }
 
+- (void)viewDidUnload {
+    [self setRemoteButton:nil];
+    [self setRemoteButton:nil];
+    [super viewDidUnload];
+}
+- (IBAction)loadRemoteButtonPressed:(id)sender {
+    static NSInteger count = 0;
+    count = (count + 1 > 3 ? 1 : count + 1);
+    NSString *url = nil;
+    
+    if (count == 1) {
+        url = @"http://pmunnie.files.wordpress.com/2010/10/rind.jpg";
+    } else if (count == 2) {
+        url = @"http://4.bp.blogspot.com/-RkBxVsz2CE8/TvOUhXhczMI/AAAAAAAAGVA/lV4SPLgLS2k/s1600/Hand_with_reflecting_globe.jpg";
+    } else if (count == 3) {
+        url = @"http://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Escher's_Relativity.jpg/250px-Escher's_Relativity.jpg";
+    }
+    [_remoteButton displayImageFromURL:url
+                     completionHandler:^(NSError *error) {
+                         
+                         if (error) {
+                             
+                             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                             message:[error localizedDescription]
+                                                                            delegate:nil
+                                                                   cancelButtonTitle:@"OK"
+                                                                   otherButtonTitles:nil];
+                             [alert show];
+                         }
+                         
+                         [loadRemoteButton_ setEnabled:YES];
+                     }];
+}
+
+- (IBAction)remoteButtonPressed:(id)sender {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"button clicked" message:@"see? this works" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+}
 @end

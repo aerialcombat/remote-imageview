@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1701FFED16D4DA7600A62F57 /* DJRemoteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1701FFEC16D4DA7600A62F57 /* DJRemoteButton.m */; };
 		57AEE74E16C12DA000728A96 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AEE74D16C12DA000728A96 /* UIKit.framework */; };
 		57AEE75016C12DA000728A96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AEE74F16C12DA000728A96 /* Foundation.framework */; };
 		57AEE75216C12DA000728A96 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AEE75116C12DA000728A96 /* CoreGraphics.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1701FFEB16D4DA7600A62F57 /* DJRemoteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJRemoteButton.h; sourceTree = "<group>"; };
+		1701FFEC16D4DA7600A62F57 /* DJRemoteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJRemoteButton.m; sourceTree = "<group>"; };
 		57AEE74A16C12DA000728A96 /* MNMRemoteImageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNMRemoteImageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57AEE74D16C12DA000728A96 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		57AEE74F16C12DA000728A96 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,9 +59,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1701FFEA16D4DA5800A62F57 /* DJRemoteButton */ = {
+			isa = PBXGroup;
+			children = (
+				1701FFEB16D4DA7600A62F57 /* DJRemoteButton.h */,
+				1701FFEC16D4DA7600A62F57 /* DJRemoteButton.m */,
+			);
+			name = DJRemoteButton;
+			sourceTree = "<group>";
+		};
 		57AEE74116C12DA000728A96 = {
 			isa = PBXGroup;
 			children = (
+				1701FFEA16D4DA5800A62F57 /* DJRemoteButton */,
 				57AEE75316C12DA000728A96 /* MNMRemoteImageView */,
 				57AEE74C16C12DA000728A96 /* Frameworks */,
 				57AEE74B16C12DA000728A96 /* Products */,
@@ -182,6 +195,7 @@
 				57AEE75E16C12DA000728A96 /* AppDelegate.m in Sources */,
 				57AEE76716C12DA000728A96 /* ViewController.m in Sources */,
 				57AEE77216C12DB500728A96 /* MNMRemoteImageView.m in Sources */,
+				1701FFED16D4DA7600A62F57 /* DJRemoteButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +320,7 @@
 				57AEE76F16C12DA100728A96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
