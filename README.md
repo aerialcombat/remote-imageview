@@ -13,8 +13,14 @@ Installation instructions
                            completionHandler:^(NSError *error) {
                               // Do something 
                            }];
+4. You can ALSO show a button from an URL this way
 
-4. You can see some examples in `ViewController` class.
+        [remoteButton displayImageFromURL:url
+                           completionHandler:^(NSError *error) {
+                              // Do something 
+                           }];                           
+
+5. You can see some examples in `ViewController` class.
 
 Documentation
 =============
